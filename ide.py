@@ -1,6 +1,17 @@
+import toml
 from tkinter import *
 from tkinter.filedialog import asksaveasfilename, askopenfilename
 import subprocess
+
+config = {
+    'file_path': '',
+    'window_title': 'Python Editor',
+    'output_height': 10,
+}
+toml_string = toml.dumps(config)
+
+with open('config.toml', 'w') as file:
+    file.write(toml_string)
 
 file_path = ''
 
