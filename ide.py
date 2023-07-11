@@ -3,6 +3,8 @@ from tkinter import *
 from tkinter.filedialog import asksaveasfilename, askopenfilename
 import subprocess
 
+file_path = ''
+
 config = {
     'file_path': '',
     'window_title': 'Python Editor',
@@ -13,7 +15,7 @@ toml_string = toml.dumps(config)
 with open('config.toml', 'w') as file:
     file.write(toml_string)
 
-file_path = ''
+
 
 compiler = Tk()
 compiler.title("Python Editor")
